@@ -1,0 +1,35 @@
+﻿<Window x:Class="ClientApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ClientApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="750" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="paramsStackPanel" Orientation="Vertical">
+                <Button Click="Button_Click" FontSize="30" Background="White">
+                    Start Swagger
+                </Button>
+                <TextBox Name="requestTxtb" FontSize="24"></TextBox>
+                <Button Click="Button_Click_1" FontSize="30" Background="White">
+                    Send Request
+                </Button>
+            </StackPanel>
+
+            <ScrollViewer VerticalScrollBarVisibility="Visible" Height="300">
+                <StackPanel Name="CommandsStackPanel" Width="500" ></StackPanel>
+            </ScrollViewer>
+            <StackPanel>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <TextBox TextWrapping="Wrap" Height="300"
+                             Background="LightBlue" Text="Response Text"
+                             FontSize="20" Name="ResponseTxtb"
+                             ></TextBox>
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>
